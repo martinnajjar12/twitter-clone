@@ -46,7 +46,8 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'better_errors', '~> 2.9', '>= 2.9.1'
   gem 'guard', '~> 2.16', '>= 2.16.2'
-  gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false
+  gem 'guard-livereload', '~> 2.5'
+  gem 'binding_of_caller', '~> 0.8.0'
 end
 
 group :test do

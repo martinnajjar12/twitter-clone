@@ -6,10 +6,12 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+
     <% if flash[:notice] %>
       <div class="notification is-primary global-notification">
         <p class="notice">
@@ -25,6 +27,33 @@
       </div>
     <% end %>
 
+    <nav class="navbar is-info">
+      <div class="navbar-brand">
+        <%= link_to root_path, class: "navbar-item" do %>
+          <h1 class="title is-5">Twitter</h1>
+        <% end %>
+      </div>
+
+      <div class="nav-burger burger" data-targer="navbarExample">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div id="navbarExample" class="navbar-menu">
+        <div class="navbar-end">
+          <div class="field is-grouped">
+            <p class="control">
+              <%= link_to "New Tweet", new_tweeet_path, class: "button is-info is-inverted" %>
+              <%= link_to "Sign Up", new_tweeet_path, class: "button is-info" %>
+            </p>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
     <%= yield %>
+  
   </body>
 </html>
